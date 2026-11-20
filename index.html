@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101214" />
+  <meta name="description" content="Packaging purchase orders and inventory for a beverage company with co-packers: receipts with mismatch flags, piece-level pallet ledger, cycle counts with QR scanning, and count holds that block outbound stock." />
+  <title>Packaging Inventory · POs, stock and cycle counts</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23101214'/%3E%3Crect x='9' y='5' width='14' height='22' rx='4' fill='none' stroke='%23e6edf2' stroke-width='2'/%3E%3Crect x='9' y='12' width='14' height='7' fill='%23ffb547'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"></span>
+      <div>
+        <h1>Packaging Inventory</h1>
+        <p class="sub"><span id="company"></span> · business date <span id="today"></span></p>
+      </div>
+    </div>
+    <div class="who">
+      <label for="user">Your name (recorded on every change)</label>
+      <input id="user" autocomplete="name" maxlength="60" required />
+    </div>
+  </header>
+  <nav class="tabs" aria-label="Sections">
+    <a href="#dashboard">Dashboard</a>
+    <a href="#pos">Purchase orders</a>
+    <a href="#stock">Stock &amp; moves</a>
+    <a href="#counts">Cycle counts</a>
+    <a href="#labels">Labels</a>
+    <a href="#audit">Audit log</a>
+    <a href="#settings">Settings</a>
+  </nav>
+  <p id="msg" class="msg" role="status" aria-live="polite"></p>
+  <div id="camwrap" class="camwrap" hidden><video id="cam" playsinline muted aria-label="Camera preview"></video></div>
+  <div id="fatal" class="fatal" role="alert" hidden></div>
+  <main id="main" tabindex="-1">
+    <section id="view-dashboard" data-view="dashboard" aria-labelledby="h-dashboard"></section>
+    <section id="view-pos" data-view="pos" aria-labelledby="h-pos" hidden></section>
+    <section id="view-stock" data-view="stock" aria-labelledby="h-stock" hidden></section>
+    <section id="view-counts" data-view="counts" aria-labelledby="h-counts" hidden></section>
+    <section id="view-labels" data-view="labels" aria-labelledby="h-labels" hidden></section>
+    <section id="view-audit" data-view="audit" aria-labelledby="h-audit" hidden></section>
+    <section id="view-settings" data-view="settings" aria-labelledby="h-settings" hidden></section>
+  </main>
+  <footer>
+    <p>Northbeam Beverage Co., its sites, suppliers and stock are made up. Data is saved in this browser only. Built by Deji.</p>
+  </footer>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
